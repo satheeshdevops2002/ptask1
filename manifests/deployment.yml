@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: satheeshdevopsptask 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: satheeshdevopsptask
+  template:
+    metadata:
+      labels:
+        app: satheeshdevopsptask 
+    spec:
+      containers:
+        - name: satheeshdevopsptask 
+          image: contreg1acr1.azurecr.io/satheeshdevopsptask
+          ports:
+          - containerPort: 80
